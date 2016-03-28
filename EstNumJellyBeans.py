@@ -44,9 +44,11 @@ class NumJellyEstimator:
     # \param people integer number of people on earth
     def set_world_pop(self, people):
 
-        # NE24: Add a test for type here
+        # NE24: assert type(people) is int, \ "Error: people must be an integer."
  
-        # NE24: Add a test for value here
+        # NE24: if (people <= 0):
+					print("Error people must be greater than 0")
+					sys.exit()
 
         # Store the fraction.
         self.worldPop = people
@@ -55,9 +57,13 @@ class NumJellyEstimator:
     ## Set the fraction of people who love the color pink.
     def set_frac_ppl_loving_pink(self, frac):
 
-        # NE24: Add a test for type here
+        # NE24: assert type(frac) is float, \
+            "Error: fraction of people who like pink must be between 0 and 1."
 
-        # NE24: Add a test for value here
+        # NE24:if ((frac <= 0.0) or (frac >= 1.0)):
+            print "\nError: Fraction of people who love color pink must be between"\
+                  +" 0.0 and 1.0.\n"
+            sys.exit()
 
         # Store the fraction.
         self.fracPplLovingPink = frac
@@ -96,5 +102,7 @@ class NumJellyEstimator:
         # NE24: What other checks might be useful? What is a better way to do this?
 
         return int(n)
+        A model check might be useful. Just having one function that tests all of them. another check
+is having the number of people who like pick not exceeding the population
 
 
