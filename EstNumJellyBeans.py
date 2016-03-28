@@ -1,6 +1,7 @@
 #!/home/Install/anaconda/bin/python
 
 import sys
+# April You Assignment 5 March 28, 2016
 
 ## This class estimates the number of jelly beans in the world using input data
 # determined to be correlated to this result.
@@ -47,8 +48,8 @@ class NumJellyEstimator:
         # NE24: assert type(people) is int, \ "Error: people must be an integer."
  
         # NE24: if (people <= 0):
-					print("Error people must be greater than 0")
-					sys.exit()
+				print("Error people must be greater than 0")
+				sys.exit()
 
         # Store the fraction.
         self.worldPop = people
@@ -103,6 +104,6 @@ class NumJellyEstimator:
 
         return int(n)
         A model check might be useful. Just having one function that tests all of them. another check
-is having the number of people who like pick not exceeding the population
+is having the number of people who like pink not exceeding the population
 
 
